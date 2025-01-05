@@ -1,0 +1,14 @@
+<form [formGroup]="temperatureConverter">
+    <section class="align-center">
+        <div>
+            <label>Fahrenheit: </label>
+            <input type="number" class="large" formControlName="fahren" (keyup)="fahToCel(temperatureConverter.value)"
+                data-test-id="fahrenheit-input" />
+        </div>
+        <div>
+            <label>Celsius: </label>
+            <input type="number" formControlName="celsius" class="large" (keyup)="celToFah(temperatureConverter.value)"
+                data-test-id="celsius-input" />
+        </div>
+    </section>
+</form>
